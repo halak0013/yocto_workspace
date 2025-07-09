@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=https://taskfile.dev/schema.json
+version: "3"
+
+
+tasks:
+  default:
+    silent: true
+    cmds:
+      - task --list-all --summary
+      - echo "----------------------------------------"
+
+
+  yh:
+    desc: "Run the distrobox container"
+    cmds:
+      - |
+        conda deactivate 2>/dev/null || true && \
+        export PATH=$(echo $PATH | tr ':' '\n' | grep -v 'miniconda3' | tr '\n' ':') && \
+        unset PYTHONPATH unset CONDA_PREFIX && unset CONDA_DEFAULT_ENV && unset CONDA_EXE && unset CONDA_PYTHON_EXE && \
+        which python3 && \
+        if docker images | grep -q 'yocto_hane'; then \
+          echo "Docker image 'yocto_hane' already exists"; \
+        else \
+          echo "Building yocto_hane image from Dockerfile" && \
+          docker build -f Dockerfile --no-cache -t yocto_hane:latest .; \
+        fi && \
+        distrobox assemble create --file distrobox.ini && \
+        distrobox-enter --additional-flags "--tty" --name yocto_hane --no-workdir
+
+  destroy:
+    prompt: This is a dangerous command... Do you want to continue?
+    desc: Destroy everything including docker images, distrobox etc.
+    cmds:
+      - distrobox stop yocto_hane --yes || true
+      - distrobox rm yocto_hane --force || true
+      - docker stop yocto_hane || true
+      - docker rmi yocto_hane:latest || true
+      - bash scripts/destroy.sh || true
