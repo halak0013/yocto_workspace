@@ -4,19 +4,49 @@ alias nano="nano -c"
 alias py='python3'
 alias bb='bitbake'
 
-alias b='kate ~/.bashrc'
+# Aliases
+alias ls='ls --color'
+
 alias c='clear'
 alias s='source ~/.bashrc'
 
 alias up='sudo nala update'
-alias ins='sudo nala install --no-autoremove'
+alias ins='sudo nala install'
 alias se='nala search'
+
 alias fm='sudo apt install --fix-missing'
 alias fb='sudo apt install --fix-broken'
+
+alias g='git clone'
+alias ch='chmod +x'
+alias b='kate ~/.bashrc'
 
 alias co='code .'
 alias pi='pip install'
 alias piu='pip uninstall'
+alias p='python3'
+
+
+# .zip dosyalarını çıkartmak için
+alias uzip='unzip'
+
+# .tar.gz dosyalarını çıkartmak için
+alias utgz='tar -xzf'
+
+# .tar.bz2 dosyalarını çıkartmak için
+alias utbz2='tar -xjf'
+
+# .tar.xz dosyalarını çıkartmak için
+alias utxz='tar -xJf'
+
+# .gz dosyalarını çıkartmak için
+alias ugz='gunzip'
+
+# .bz2 dosyalarını çıkartmak için
+alias ubz2='bunzip2'
+
+# .xz dosyalarını çıkartmak için
+alias uxz='unxz'
 
 
 alias ..='cd ..'

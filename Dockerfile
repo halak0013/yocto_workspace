@@ -61,6 +61,7 @@ RUN apt-get update && \
     konsole \
     kde-style-breeze \
     breeze-icon-theme \
+    minicom \
     && locale-gen en_US.UTF-8
 
 # Allow minimum password length of image in Distrobox to be 1 character
