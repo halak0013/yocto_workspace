@@ -9,6 +9,11 @@ tasks:
       - task --list-all --summary
       - echo "----------------------------------------"
 
+  fetch:
+    cmds:
+      - cd && wget https://bootlin.com/doc/training/yocto/yocto-labs.tar.xz
+      - cd && tar xvf yocto-labs.tar.xz
+      - vcs import . < repos.yml
 
   yh:
     desc: "Run the distrobox container"

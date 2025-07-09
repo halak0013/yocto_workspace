@@ -19,6 +19,7 @@ export HISTFILESIZE=10000000
 
 export WORKDIR="${WORKDIR:-/home/yocto_hane}"
 export BANNER="$HOME/.motd"
+export YOCTO_LABS_DIR="$HOME/yocto-labs"
 export PS1='🌪️ distrobox:\[\033[01;34m\]\W\[\033[00m\]> '
 
 if [ -f ~/.bash_aliases ]; then
