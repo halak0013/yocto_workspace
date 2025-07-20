@@ -38,4 +38,4 @@ if [ -f $BANNER ]; then
     cat $BANNER
 fi
 
-cd $WORKDIR
+# cd $WORKDIR
