@@ -34,8 +34,11 @@ if ! shopt -oq posix; then
   fi
 fi
 
+
+oldpwd=$(pwd)
+source $HOME/yocto-labs/poky/oe-init-build-env
+cd $oldpwd
+
 if [ -f $BANNER ]; then
     cat $BANNER
 fi
-
-# cd $WORKDIR
