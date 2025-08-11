@@ -1,4 +1,4 @@
-# Bealey-ai kartı için yocto alanı
+# Geliştirme kartı için yocto alanı
 Burada bir çok işleminizi sistemden bağımsız bir şekilde yapabilirsiniz.
 
 # Kurulum
