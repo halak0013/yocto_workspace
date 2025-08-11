@@ -36,9 +36,13 @@ fi
 
 
 oldpwd=$(pwd)
+cd $HOME/yocto-labs
 source $HOME/yocto-labs/poky/oe-init-build-env
 cd $oldpwd
 
 if [ -f $BANNER ]; then
     cat $BANNER
 fi
+
+export GREP_OPTIONS='--color=auto'
+alias grep='grep --color=auto'

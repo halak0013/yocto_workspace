@@ -1,6 +1,12 @@
 # Geliştirme kartı için yocto alanı
 Burada bir çok işleminizi sistemden bağımsız bir şekilde yapabilirsiniz.
 
+# Kendi tuttuğum karmaşık doc
+[Karmaşık belgelendirme](doc/karmasik_doc/yocto.md)
+
+# Düzeltilmiş hali
+[Düzenli hali](doc/duzenli_hali.md)
+
 # Kurulum
 
 taskfile kurulumu
