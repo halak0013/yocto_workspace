@@ -14,3 +14,8 @@ repositories:
     type: git
     url: git://git.yoctoproject.org/meta-arm
     version: a8fe9d22eaefc294f91096c6a32663e2f4ab3b10
+
+  .distrobox/yocto-labs/meta-bismih:
+    type: git
+    url: git://github.com/halak0013/meta-bismih.git
+    version: e67a8fb0665f36424f32aaa47a45d21e7a008e53
